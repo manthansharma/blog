@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Setup GitHub Pages with Ghost</title>
+    <meta name="description" content="This tutorial describes how to deploy your Ghost based Blog to Static GitHub pages.">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=1a00231a35">
+
+
+    <link rel="canonical" href="index.html">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="amphtml" href="amp/index.html">
+    
+    <meta property="og:site_name" content="Manthan Sharma's Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Setup GitHub Pages with Ghost">
+    <meta property="og:description" content="This tutorial describes how to deploy your Ghost based Blog to Static GitHub pages.">
+    <meta property="og:url" content="https://manthansharma.github.io/blog/setup-github-pages-with-ghost/">
+    <meta property="article:published_time" content="2017-03-21T23:39:45.000Z">
+    <meta property="article:modified_time" content="2017-03-22T01:57:07.000Z">
+    <meta property="article:tag" content="ghost">
+    <meta property="article:tag" content="tutorial">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Setup GitHub Pages with Ghost">
+    <meta name="twitter:description" content="This tutorial describes how to deploy your Ghost based Blog to Static GitHub pages.">
+    <meta name="twitter:url" content="https://manthansharma.github.io/blog/setup-github-pages-with-ghost/">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Manthan Sharma">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="ghost, tutorial">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Manthan Sharma&#x27;s Blog",
+        "logo": "https://manthansharma.github.io/blog/ghost/img/ghosticon.jpg"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Manthan Sharma",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://manthansharma.github.io/blog/content/images/2017/03/logo.png",
+            "width": 190,
+            "height": 190
+        },
+        "url": "https://manthansharma.github.io/blog/author/manthan/",
+        "sameAs": []
+    },
+    "headline": "Setup GitHub Pages with Ghost",
+    "url": "https://manthansharma.github.io/blog/setup-github-pages-with-ghost/",
+    "datePublished": "2017-03-21T23:39:45.000Z",
+    "dateModified": "2017-03-22T01:57:07.000Z",
+    "keywords": "ghost, tutorial",
+    "description": "This tutorial describes how to deploy your Ghost based Blog to Static GitHub pages.",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://manthansharma.github.io/blog"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.11">
+    <link rel="alternate" type="application/rss+xml" title="Manthan Sharma's Blog" href="../rss/index.html">
+</head>
+<body class="post-template tag-ghost-tag tag-tutorial nav-closed">
+
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="index.html#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+            <li class="nav-home"><a href="../index.html">Home</a></li>
+    </ul>
+        <a class="subscribe-button icon-feed" href="../rss/index.html">Subscribe</a>
+</div>
+<span class="nav-cover"></span>
+
+
+    <div class="site-wrapper">
+
+        
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+            <a class="menu-button icon-menu" href="index.html#"><span class="word">Menu</span></a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post tag-ghost-tag tag-tutorial">
+
+        <header class="post-header">
+            <h1 class="post-title">Setup GitHub Pages with Ghost</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2017-03-22">22 March 2017</time>  on <a href="../tag/ghost-tag/index.html">ghost</a>, <a href="../tag/tutorial/index.html">tutorial</a>
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p>To build your own static GitHub Pages using Ghost, just follow these steps.</p>
+
+<h3 id="installnodejs">Install Node.js</h3>
+
+<p>Ghost is written in Node.js, so you will need the Node.js runtime.</p>
+
+<p><strong>For OSX:</strong></p>
+
+<pre><code>brew install node  
+</code></pre>
+
+<p><strong>For Linux distributions:</strong></p>
+
+<p><a href="//blog.teamtreehouse.com/install-node-js-npm-linux">//blog.teamtreehouse.com/install-node-js-npm-linux</a></p>
+
+<h3 id="downloadandinstallghost">Download and Install Ghost</h3>
+
+<ol>
+<li>Download the latest release of Ghost  </li>
+<li>Unzip in the location you want to install  </li>
+<li>Fire up a terminal <code>npm install --production</code>  </li>
+<li>Start Ghost! <br>
+Local environment: <code>npm start</code> <br>
+On a server: <code>npm start --production</code>  </li>
+<li>Open <a href="../ghost.html">https://manthansharma.github.io/blog/ghost</a></li>
+</ol>
+
+<blockquote>
+  <p>Note: More <a href="//support.ghost.org/installation/">install docs</a> here in case you got stuck.</p>
+</blockquote>
+
+<h3 id="startghost">Start Ghost</h3>
+
+<pre><code>npm start  
+</code></pre>
+
+<h3 id="logintoghost">Login to Ghost</h3>
+
+<p>Open <a href="../ghost.html">https://manthansharma.github.io/blog/ghost</a></p>
+
+<p>Follows the initial step to create Ghost Blog Account.</p>
+
+<h2 id="createyourgithubpagesrepo">Create your GitHub Pages repo</h2>
+
+<p>See the <a href="https://help.github.com/categories/20/articles">GitHub Pages Basics Documentation</a> for details.</p>
+
+<p>You must use the username/username.github.io naming scheme. The repo name must be lower case even if your username has upper case letters.</p>
+
+<p><strong>If you are using GitHub Pages domain for any other project</strong></p>
+
+<p>GitHub lets you host your static pages for free through GitHub Pages. Any repository you have on GitHub can be configured to provide a preview on the web. All you need to do is create a branch called <code>gh-pages</code> and your repository is accessible at <code>username.github.io/repository-name</code>, where you replace username and repository-name with their respective values.</p>
+
+<h2 id="installbuster">Install Buster</h2>
+
+<p>With the tool Brute force static site generator for Ghost you can create static page for Ghost Blogs. </p>
+
+<p>First we install Buster with:</p>
+
+<pre><code>pip install buster  
+</code></pre>
+
+<blockquote>
+  <p>Python is needed for install buster. (The latest versions of CentOS, Fedora, Redhat Enterprise (RHEL), Ubuntu and Ubuntu come with Python 2.x and 3.x out of the box.)</p>
+</blockquote>
+
+<p>then for setting up static folder just makes a <code>static/</code> directory and initializes a git repository inside it or use:</p>
+
+<pre><code>buster setup  
+</code></pre>
+
+<h2 id="writeblogposts">Write Blog posts</h2>
+
+<p>Now your setup is complete and you can start writing Blog posts in Ghost and read the initial blog post how to edit with Markdown etc.</p>
+
+<h2 id="exportghostwithbuster">Export Ghost with Buster</h2>
+
+<p>All published blog posts could be exported to the static folder with Buster.</p>
+
+<p>Fire up a terminal  </p>
+
+<pre><code>buster generate --domain=https://manthansharma.github.io/blog  
+buster preview  
+open //localhost:9000  
+</code></pre>
+
+<p>The output of Buster could be previewed on port 9000.</p>
+
+<h2 id="deploytogithubpages">Deploy to GitHub Pages</h2>
+
+<pre><code>buster deploy  
+</code></pre>
+
+<p>This will automatically add, commit and push all files in the static folder to your GitHub repo.</p>
+
+<p>For the initial push, please wait up to 10 minutes until GitHub deploys your subdomain.</p>
+
+<p>All upcoming pushes are much faster (but can take longer time) and you can see your static Ghost blog posts on <a href="https://username.github.io">https://username.github.io</a></p>
+
+<h3 id="updateoraddnewblogposts">Update or Add new Blog posts</h3>
+
+<p>To write new Blog posts or update the existing ones, just start Ghost, edit, then generate and deploy the static pages.</p>
+
+<p>Fire up a terminal and run the following commands in your ghost blog directory.  </p>
+
+<pre><code>npm start  
+buster deploy  
+</code></pre>
+
+<h3 id="addingcommentstoyourstaticpages">Adding Comments to Your Static Pages</h3>
+
+<p>One downside of a static website is the inability to add comments. However, third-party services like <strong>Disqus</strong> only require you to insert a <code>&lt;script&gt;</code> tag, which gets you a comment box. Disqus recognises the URL from which the request is generated and automatically saves the comments to the relevant thread.</p>
+
+<p>To insert the Disqus comment system on your static site, you need to insert it in the Ghost template, from which the static site is generated. Once you register with Disqus, you’ll be provided with a code snippet to insert on your site.</p>
+
+<p>Find the file <code>post.hbs</code> in the theme directory in Ghost <code>(typically /content/themes/[theme_name]/post.hbs)</code> and paste it in between <code>{{/post}}</code> and <code>&lt;/article&gt;</code>.</p>
+
+<blockquote>
+  <p>For more information, you could look at a detailed help page on Disqus regarding its installation on Ghost sites. If you have done this correctly, Disqus should appear on your local site, and Buster would extract it automatically.</p>
+</blockquote>
+
+<p>That's it. You can see this blog as demo for above tutorial and I will be using to maintain to report my weekly progress in the Google Summer of Code</p>
+        </section>
+
+        <footer class="post-footer">
+
+
+            <figure class="author-image">
+                <a class="img" href="../author/manthan/index.html" style="background-image: url(../content/images/2017/03/logo.png)"><span class="hidden">Manthan Sharma's Picture</span></a>
+            </figure>
+
+            <section class="author">
+                <h4><a href="../author/manthan/index.html">Manthan Sharma</a></h4>
+
+                    <p>Read <a href="../author/manthan/index.html">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    
+                    
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=Setup%20GitHub%20Pages%20with%20Ghost&amp;url=https://manthansharma.github.io/blog/setup-github-pages-with-ghost/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://manthansharma.github.io/blog/setup-github-pages-with-ghost/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https://manthansharma.github.io/blog/setup-github-pages-with-ghost/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+
+        </footer>
+
+    </article>
+</main>
+
+<aside class="read-next">
+</aside>
+
+
+
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href="../index.html">Manthan Sharma's Blog</a> © 2017</section>
+            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+        </footer>
+
+    </div>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=1a00231a35"></script>
+    <script type="text/javascript" src="../assets/js/index.js?v=1a00231a35"></script>
+
+</body>
+</html>

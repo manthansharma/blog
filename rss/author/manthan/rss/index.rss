@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="//purl.org/dc/elements/1.1/" xmlns:content="//purl.org/rss/1.0/modules/content/" xmlns:atom="//www.w3.org/2005/Atom" version="2.0" xmlns:media="//search.yahoo.com/mrss/"><channel><title><![CDATA[Manthan Sharma - Manthan Sharma's Blog]]></title><description><![CDATA[An OpenSource Freelancer Techie Notes]]></description><link>https://manthansharma.github.io/blog/</link><generator>Ghost 0.11</generator><lastBuildDate>Wed, 22 Mar 2017 03:38:20 GMT</lastBuildDate><atom:link href="https://manthansharma.github.io/blog/author/manthan/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Setup GitHub Pages with Ghost]]></title><description><![CDATA[This tutorial describes how to deploy your Ghost based Blog to Static GitHub pages.]]></description><link>https://manthansharma.github.io/blog/setup-github-pages-with-ghost/</link><guid isPermaLink="false">c2d89dac-9ae6-4c90-b1e5-cc271cee48d2</guid><category><![CDATA[ghost]]></category><category><![CDATA[tutorial]]></category><dc:creator><![CDATA[Manthan Sharma]]></dc:creator><pubDate>Tue, 21 Mar 2017 23:39:45 GMT</pubDate><content:encoded><![CDATA[<p>To build your own static GitHub Pages using Ghost, just follow these steps.</p>
+
+<h3 id="installnodejs">Install Node.js</h3>
+
+<p>Ghost is written in Node.js, so you will need the Node.js runtime.</p>
+
+<p><strong>For OSX:</strong></p>
+
+<pre><code>brew install node  
+</code></pre>
+
+<p><strong>For Linux distributions:</strong></p>
+
+<p><a href="//blog.teamtreehouse.com/install-node-js-npm-linux">//blog.teamtreehouse.com/install-node-js-npm-linux</a></p>
+
+<h3 id="downloadandinstallghost">Download and Install Ghost</h3>
+
+<ol>
+<li>Download the latest release of Ghost  </li>
+<li>Unzip in the location you want to install  </li>
+<li>Fire up a terminal <code>npm install --production</code>  </li>
+<li>Start Ghost! <br>
+Local environment: <code>npm start</code> <br>
+On a server: <code>npm start --production</code>  </li>
+<li>Open <a href="https://manthansharma.github.io/blog/ghost">https://manthansharma.github.io/blog/ghost</a></li>
+</ol>
+
+<blockquote>
+  <p>Note: More <a href="//support.ghost.org/installation/">install docs</a> here in case you got stuck.</p>
+</blockquote>
+
+<h3 id="startghost">Start Ghost</h3>
+
+<pre><code>npm start  
+</code></pre>
+
+<h3 id="logintoghost">Login to Ghost</h3>
+
+<p>Open <a href="https://manthansharma.github.io/blog/ghost">https://manthansharma.github.io/blog/ghost</a></p>
+
+<p>Follows the initial step to create Ghost Blog Account.</p>
+
+<h2 id="createyourgithubpagesrepo">Create your GitHub Pages repo</h2>
+
+<p>See the <a href="https://help.github.com/categories/20/articles">GitHub Pages Basics Documentation</a> for details.</p>
+
+<p>You must use the username/username.github.io naming scheme. The repo name must be lower case even if your username has upper case letters.</p>
+
+<p><strong>If you are using GitHub Pages domain for any other project</strong></p>
+
+<p>GitHub lets you host your static pages for free through GitHub Pages. Any repository you have on GitHub can be configured to provide a preview on the web. All you need to do is create a branch called <code>gh-pages</code> and your repository is accessible at <code>username.github.io/repository-name</code>, where you replace username and repository-name with their respective values.</p>
+
+<h2 id="installbuster">Install Buster</h2>
+
+<p>With the tool Brute force static site generator for Ghost you can create static page for Ghost Blogs. </p>
+
+<p>First we install Buster with:</p>
+
+<pre><code>pip install buster  
+</code></pre>
+
+<blockquote>
+  <p>Python is needed for install buster. (The latest versions of CentOS, Fedora, Redhat Enterprise (RHEL), Ubuntu and Ubuntu come with Python 2.x and 3.x out of the box.)</p>
+</blockquote>
+
+<p>then for setting up static folder just makes a <code>static/</code> directory and initializes a git repository inside it or use:</p>
+
+<pre><code>buster setup  
+</code></pre>
+
+<h2 id="writeblogposts">Write Blog posts</h2>
+
+<p>Now your setup is complete and you can start writing Blog posts in Ghost and read the initial blog post how to edit with Markdown etc.</p>
+
+<h2 id="exportghostwithbuster">Export Ghost with Buster</h2>
+
+<p>All published blog posts could be exported to the static folder with Buster.</p>
+
+<p>Fire up a terminal  </p>
+
+<pre><code>buster generate --domain=https://manthansharma.github.io/blog  
+buster preview  
+open //localhost:9000  
+</code></pre>
+
+<p>The output of Buster could be previewed on port 9000.</p>
+
+<h2 id="deploytogithubpages">Deploy to GitHub Pages</h2>
+
+<pre><code>buster deploy  
+</code></pre>
+
+<p>This will automatically add, commit and push all files in the static folder to your GitHub repo.</p>
+
+<p>For the initial push, please wait up to 10 minutes until GitHub deploys your subdomain.</p>
+
+<p>All upcoming pushes are much faster (but can take longer time) and you can see your static Ghost blog posts on <a href="https://username.github.io">https://username.github.io</a></p>
+
+<h3 id="updateoraddnewblogposts">Update or Add new Blog posts</h3>
+
+<p>To write new Blog posts or update the existing ones, just start Ghost, edit, then generate and deploy the static pages.</p>
+
+<p>Fire up a terminal and run the following commands in your ghost blog directory.  </p>
+
+<pre><code>npm start  
+buster deploy  
+</code></pre>
+
+<h3 id="addingcommentstoyourstaticpages">Adding Comments to Your Static Pages</h3>
+
+<p>One downside of a static website is the inability to add comments. However, third-party services like <strong>Disqus</strong> only require you to insert a <code>&lt;script&gt;</code> tag, which gets you a comment box. Disqus recognises the URL from which the request is generated and automatically saves the comments to the relevant thread.</p>
+
+<p>To insert the Disqus comment system on your static site, you need to insert it in the Ghost template, from which the static site is generated. Once you register with Disqus, you’ll be provided with a code snippet to insert on your site.</p>
+
+<p>Find the file <code>post.hbs</code> in the theme directory in Ghost <code>(typically /content/themes/[theme_name]/post.hbs)</code> and paste it in between <code>{{/post}}</code> and <code>&lt;/article&gt;</code>.</p>
+
+<blockquote>
+  <p>For more information, you could look at a detailed help page on Disqus regarding its installation on Ghost sites. If you have done this correctly, Disqus should appear on your local site, and Buster would extract it automatically.</p>
+</blockquote>
+
+<p>That's it. You can see this blog as demo for above tutorial and I will be using to maintain to report my weekly progress in the Google Summer of Code</p>]]></content:encoded></item></channel></rss>

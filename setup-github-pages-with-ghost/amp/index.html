@@ -20,7 +20,7 @@
     <meta property="og:description" content="This tutorial describes how to deploy your Ghost based Blog to Static GitHub pages.">
     <meta property="og:url" content="https://blog.manthansharma.com/setup-github-pages-with-ghost/">
     <meta property="article:published_time" content="2017-03-21T23:39:45.000Z">
-    <meta property="article:modified_time" content="2017-03-22T01:57:07.000Z">
+    <meta property="article:modified_time" content="2017-03-23T07:59:46.000Z">
     <meta property="article:tag" content="ghost">
     <meta property="article:tag" content="tutorial">
     
@@ -57,7 +57,7 @@
     "headline": "Setup GitHub Pages with Ghost",
     "url": "https://blog.manthansharma.com/setup-github-pages-with-ghost/",
     "datePublished": "2017-03-21T23:39:45.000Z",
-    "dateModified": "2017-03-22T01:57:07.000Z",
+    "dateModified": "2017-03-23T07:59:46.000Z",
     "keywords": "ghost, tutorial",
     "description": "This tutorial describes how to deploy your Ghost based Blog to Static GitHub pages.",
     "mainEntityOfPage": {
@@ -918,7 +918,7 @@ On a server: <code>npm start --production</code>  </li>
 
 <p>First we install Buster with:</p>
 
-<pre><code>pip install buster  
+<pre><code>pip install git+https://github.com/manthansharma/buster/  
 </code></pre>
 
 <blockquote>
@@ -940,7 +940,7 @@ On a server: <code>npm start --production</code>  </li>
 
 <p>Fire up a terminal  </p>
 
-<pre><code>buster generate --domain=https://blog.manthansharma.com  
+<pre><code>buster generate --domain=https://blog.manthansharma.com --web-url=YOUR_BLOG_URL  
 buster preview  
 open //localhost:9000  
 </code></pre>
@@ -965,6 +965,7 @@ open //localhost:9000
 <p>Fire up a terminal and run the following commands in your ghost blog directory.  </p>
 
 <pre><code>npm start  
+buster generate --domain=https://blog.manthansharma.com --web-url=YOUR_BLOG_URL  
 buster deploy  
 </code></pre>
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="//purl.org/dc/elements/1.1/" xmlns:content="//purl.org/rss/1.0/modules/content/" xmlns:atom="//www.w3.org/2005/Atom" version="2.0" xmlns:media="//search.yahoo.com/mrss/"><channel><title><![CDATA[ghost - Manthan Sharma's Blog]]></title><description><![CDATA[An OpenSource Freelancer Techie Notes]]></description><link>https://blog.manthansharma.com/</link><generator>Ghost 0.11</generator><lastBuildDate>Thu, 23 Mar 2017 06:54:51 GMT</lastBuildDate><atom:link href="https://blog.manthansharma.com/tag/ghost-tag/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Setup GitHub Pages with Ghost]]></title><description><![CDATA[This tutorial describes how to deploy your Ghost based Blog to Static GitHub pages.]]></description><link>https://blog.manthansharma.com/setup-github-pages-with-ghost/</link><guid isPermaLink="false">c2d89dac-9ae6-4c90-b1e5-cc271cee48d2</guid><category><![CDATA[ghost]]></category><category><![CDATA[tutorial]]></category><dc:creator><![CDATA[Manthan Sharma]]></dc:creator><pubDate>Tue, 21 Mar 2017 23:39:45 GMT</pubDate><content:encoded><![CDATA[<p>To build your own static GitHub Pages using Ghost, just follow these steps.</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="//purl.org/dc/elements/1.1/" xmlns:content="//purl.org/rss/1.0/modules/content/" xmlns:atom="//www.w3.org/2005/Atom" version="2.0" xmlns:media="//search.yahoo.com/mrss/"><channel><title><![CDATA[ghost - Manthan Sharma's Blog]]></title><description><![CDATA[An OpenSource Freelancer Techie Notes]]></description><link>https://blog.manthansharma.com/</link><generator>Ghost 0.11</generator><lastBuildDate>Thu, 23 Mar 2017 07:59:56 GMT</lastBuildDate><atom:link href="https://blog.manthansharma.com/tag/ghost-tag/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Setup GitHub Pages with Ghost]]></title><description><![CDATA[This tutorial describes how to deploy your Ghost based Blog to Static GitHub pages.]]></description><link>https://blog.manthansharma.com/setup-github-pages-with-ghost/</link><guid isPermaLink="false">c2d89dac-9ae6-4c90-b1e5-cc271cee48d2</guid><category><![CDATA[ghost]]></category><category><![CDATA[tutorial]]></category><dc:creator><![CDATA[Manthan Sharma]]></dc:creator><pubDate>Tue, 21 Mar 2017 23:39:45 GMT</pubDate><content:encoded><![CDATA[<p>To build your own static GitHub Pages using Ghost, just follow these steps.</p>
 
 <h3 id="installnodejs">Install Node.js</h3>
 
@@ -56,7 +56,7 @@ On a server: <code>npm start --production</code>  </li>
 
 <p>First we install Buster with:</p>
 
-<pre><code>pip install buster  
+<pre><code>pip install git+https://github.com/manthansharma/buster/  
 </code></pre>
 
 <blockquote>
@@ -78,7 +78,7 @@ On a server: <code>npm start --production</code>  </li>
 
 <p>Fire up a terminal  </p>
 
-<pre><code>buster generate --domain=https://blog.manthansharma.com  
+<pre><code>buster generate --domain=https://blog.manthansharma.com --web-url=YOUR_BLOG_URL  
 buster preview  
 open //localhost:9000  
 </code></pre>
@@ -103,6 +103,7 @@ open //localhost:9000
 <p>Fire up a terminal and run the following commands in your ghost blog directory.  </p>
 
 <pre><code>npm start  
+buster generate --domain=https://blog.manthansharma.com --web-url=YOUR_BLOG_URL  
 buster deploy  
 </code></pre>
 
